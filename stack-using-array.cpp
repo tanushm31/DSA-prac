@@ -14,7 +14,7 @@ public:
   void printStack()
   {
     cout<<"Stack Elements :";
-    for(int i = 0;i<cap;i++)
+    for(int i = 0;i<=top;i++)
     {
       cout<<arr[i]<<", ";
     }
@@ -25,7 +25,7 @@ public:
   {
       if(top>=cap-1)
       {
-        cout<<"STACK OVERFLOW";
+        cout<<"STACK OVERFLOW\n";
         return false;
       }
       else{
@@ -48,6 +48,20 @@ public:
       return x;
     }
   }
+  int peek()
+  {
+    return this->top;
+  }
+  bool isEmpty()
+  {
+    if(this->top==-1)
+    {
+      return true;
+    }
+    else{
+      return false;
+    }
+  }
 };
 
 int main()
@@ -56,6 +70,13 @@ int main()
   cout<<s.cap<<endl;
   cout<<s.top<<endl;
   int x;
+  if(s.isEmpty())
+  {
+    cout<<"Stack is Empty";
+  }
+  else{
+    cout<<"Stack Not Empty";
+  }
   x = s.pop();
   s.push(1);
   s.push(2);
@@ -67,6 +88,16 @@ int main()
   s.printStack();
   s.push(8);
   s.push(9);
+  if(s.isEmpty())
+  {
+    cout<<"Stack is Empty";
+  }
+  else{
+    cout<<"Stack Not Empty";
+  }
+  cout<<"Removed Element: "<<s.pop()<<"\n";
+  s.printStack();
+
 
 
 
