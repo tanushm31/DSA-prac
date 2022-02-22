@@ -18,7 +18,7 @@ fibPtr = fibSeq;
 - To modify an array within a function:
 ```
 //some random function
-int func(int * arr[])
+int func(int * arr)
 {
   //To change some element of array:
   (*arr)[i] = 10;
