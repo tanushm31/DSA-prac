@@ -1,6 +1,6 @@
 # x = input()
 y = int(1/2)
-arr=[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25]
+arr=[]
 
 def binSearch(arr,n,start):
     print("Right Now Arr :",arr, "; N = ", n, "; start=",start)
@@ -27,24 +27,24 @@ def binSearch(arr,n,start):
             # print("C")
             # print("Mid + Start = ",mid +start)
             return mid+start
+def twoSumUtil(arr,target,start):
+    if(len(arr)==2):
+        if(arr[0]+arr[1]==target):
+            return [arr[0],arr[1]]
+        else:
+            return -1
+
+
+    arr = sort(arr)
+    n = target-arr[0]
+    x = binSearch(arr[1:],n,0)+start
+    if(x>=1):
+        return [0,arr[x]]
+    else:
+        return twoSumUtil(arr[1:],target,start+1)
+def twoSum(self, nums: List[int], target: int) -> List[int]:
+        nums.sort()
+        twoSumUtil(nums,target)
+
+
 print(binSearch(arr,18,0))
-# def search(x,target,arr):
-#
-#     num=target-x
-#     mid=len(arr)/2
-#     index = mid
-#     while(True):
-#         mid=len(arr)/2
-#         if(len(arr)==1):
-#             if(arr[0]==target):
-#                 index =
-#         else:
-#             if(num<arr[mid]):
-#                 arr=arr[:mid]
-#             elif(num>arr[mid]):
-#                 arr=arr[mid+1:]
-#             else:
-#                 index = mid
-#                 break
-# print("Hello World ", y)
-# print(len(arr[0:0]))
