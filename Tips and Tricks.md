@@ -66,7 +66,14 @@ print (list(enumerate(s1, 2)))
 ### Output:
 
 ```
-Return type: 
+Return type:
 [(0, 'eat'), (1, 'sleep'), (2, 'repeat')]
 [(2, 'g'), (3, 'e'), (4, 'e'), (5, 'k')]
+```
+
+- How to check if a KEY exists in Dictionary?
+
+```
+if key in dict:
+  # do something
 ```
