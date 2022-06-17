@@ -1,5 +1,8 @@
 ## Tips and Tricks:
 - Test for a single digit number: `n%10==n`
+- Binary Search: 
+  - If HIGHER Mid Point: then use   `mid =  int(left + (right - left) / 2)`
+ -If LOWER Mid Point: then use  `mid =  int((left + right) / 2)`
 
 ## C++:
 - ##### Pointer To An Array
